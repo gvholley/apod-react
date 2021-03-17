@@ -5,6 +5,7 @@ const apiKey = 'Qx2dxWtEzDNgGAZ0MQdXyZZwjkBMctbDhzt6ACNd'
 const apiURL = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&count=${count}`;
 
 
+
 function Card() {
   const [photoData, setPhotoData] = useState(null);
 
@@ -24,7 +25,7 @@ return (
 
     <React.Fragment>
     <div>
-<h1></h1>
+
     </div>
     </React.Fragment>
   );
