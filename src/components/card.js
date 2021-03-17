@@ -25,7 +25,7 @@ return (
 
     <React.Fragment>
     <div>
-
+    <h1>{photoData.date}</h1>
     </div>
     </React.Fragment>
   );
