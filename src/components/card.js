@@ -5,29 +5,27 @@ const apiKey = 'Qx2dxWtEzDNgGAZ0MQdXyZZwjkBMctbDhzt6ACNd'
 const apiURL = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&count=${count}`;
 
 
+const Card = () => {
+  const [photoData, setPhotoData] = useState([]);
 
-function Card() {
-  const [photoData, setPhotoData] = useState(null);
+async function fetchPhoto() {
+      const res = await fetch(apiURL);
+      const data = await res.json();
+      console.log(data)
+
+      setPhotoData(data);
+    }
 
   useEffect(() => {
     fetchPhoto();
-
-    async function fetchPhoto() {
-      const res = await fetch(apiURL);
-      const data = await res.json();
-      setPhotoData(data);
-      console.log(data);
-    }
   }, []);
 
-
-return (
-
-    <React.Fragment>
+  return (
     <div>
-    <h1>{photoData.date}</h1>
+      { photoData.length && (photoData.map(item => <>
+          <p>{item.date}</p>
+        </>))}
     </div>
-    </React.Fragment>
   );
 };
 
