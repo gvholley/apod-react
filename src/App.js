@@ -9,9 +9,7 @@ function App() {
   return (
     <div className="container">
     <Navbar />
-    <div className="images-container">
     <Card />
-    </div>
     <div className="save-confirmed" hidden>
       <h1>ADDED!</h1>
     </div>

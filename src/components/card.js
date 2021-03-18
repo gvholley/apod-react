@@ -21,7 +21,7 @@ async function fetchPhoto() {
   }, []);
 
   return (
-    <div>
+    <div className="images-container">
       { photoData.length && (photoData.map(item => <>
           <p>{item.date}</p>
         </>))}
