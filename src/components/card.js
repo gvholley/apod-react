@@ -24,8 +24,8 @@ async function fetchPhoto() {
     <div className="images-container">
       { photoData.length && (photoData.map(item => <React.Fragment>
           <div className="card">
-            <a href="{item.hdurl}" title="View Full Image" target="_blank">
-              <img src="{item.url}" alt="NASA APOD" loading="lazy" className="card-img-top" />
+            <a href={item.hdurl} title="View Full Image" target="_blank">
+              <img src={item.url} alt="NASA APOD" loading="lazy" className="card-img-top" />
             </a>
             <div className="card-body">
               <h5 className="card-title">{item.title}</h5>
