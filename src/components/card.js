@@ -22,11 +22,26 @@ async function fetchPhoto() {
 
   return (
     <div className="images-container">
-      { photoData.length && (photoData.map(item => <>
-          <p>{item.date}</p>
-        </>))}
+      { photoData.length && (photoData.map(item => <React.Fragment>
+          <div className="card">
+            <a href="{item.hdurl}" title="View Full Image" target="_blank">
+              <img src="{item.url}" alt="NASA APOD" loading="lazy" className="card-img-top" />
+            </a>
+            <div className="card-body">
+              <h5 className="card-title">{item.title}</h5>
+              <p className="clickable">Add to Favorites</p>
+              <p>{item.explanation}</p>
+              <small className="text-muted">
+                <p>{item.date}</p>
+                <strong>{item.copyright === undefined ? '' : item.copyright}</strong>
+              </small>
+            </div>
+          </div>
+        </React.Fragment>))}
     </div>
   );
 };
+
+//<p>{item.date}</p>
 
 export default Card;
