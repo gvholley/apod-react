@@ -1,10 +1,10 @@
 import React from 'react';
-import earth from './src/earth.svg';
+import earth from './earth.svg';
 
 function Loader() {
   return (
-    <div className="loader">
-      <img src="./src/earth.svg" alt="earth-loader" />
+    <div className="loader hidden">
+      <img src= {earth} alt="earth-loader" />
     </div>
   )
 }
