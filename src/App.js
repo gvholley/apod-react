@@ -4,7 +4,6 @@ import Card from './components/card';
 import Navbar from './components/navbar';
 import Loader from  './components/loader';
 import './App.css';
-import '.earth.svg';
 
 
 
