@@ -1,6 +1,7 @@
 import React from 'react';
 import earth from './earth.svg';
 
+
 function Loader() {
   return (
     <div className="loader hidden">
