@@ -1,20 +1,25 @@
 import React from 'react';
 import earth from './earth.svg';
 
-const loader = document.querySelector('.loader');
-
- setTimeout(function(){
-            loader.classList.add('hidden');
-    }, 3000);
-
-
 function Loader() {
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    let timeoutID = setTimeout(() => {
+      setHidden(true);
+    }, 3000);
+    return () => { clearTimeout(timeoutID); };
+  }, []);
+
+  if (hidden) {
+    return null;
+  }
+
   return (
     <div className="loader">
       <img src= {earth} alt="earth-loader" />
     </div>
-
-  )
+  );
 }
 
 export default Loader;
