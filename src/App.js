@@ -5,7 +5,9 @@ import Navbar from './components/navbar';
 import Loader from  './components/loader';
 import './App.css';
 
-
+const SaveFavorites = () => {
+  [favorites, setFavorites] = useState([]);
+}
 
 function App() {
   return (
