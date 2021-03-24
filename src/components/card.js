@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const count = 6;
+const count = 12;
 const apiKey = 'Qx2dxWtEzDNgGAZ0MQdXyZZwjkBMctbDhzt6ACNd'
 const apiURL = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&count=${count}`;
 
