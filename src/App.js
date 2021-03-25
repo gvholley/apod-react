@@ -7,7 +7,18 @@ import './App.css';
 
 const SaveFavorites = () => {
   [favorites, setFavorites] = useState([]);
+  useEffect(()=> {
+
+      const photoFavorites = JSON.parse(
+        localStorage.getItem('app-favorites')
+        );
+      if (photoFavorites) {
+        setFavorites(photoFavorites);
+      }
+  }, []);
 }
+
+
 
 function App() {
   return (
