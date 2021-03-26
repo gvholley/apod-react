@@ -4,6 +4,18 @@ const count = 12;
 const apiKey = 'Qx2dxWtEzDNgGAZ0MQdXyZZwjkBMctbDhzt6ACNd'
 const apiURL = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&count=${count}`;
 
+const SaveFavorites = () => {
+  [favorites, setFavorites] = useState([]);
+  useEffect(()=> {
+
+      const photoFavorites = JSON.parse(
+        localStorage.getItem('app-favorites')
+        );
+      if (photoFavorites) {
+        setFavorites(photoFavorites);
+      }
+  }, []);
+}
 
 const Card = () => {
   const [photoData, setPhotoData] = useState([]);
