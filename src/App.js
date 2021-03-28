@@ -5,7 +5,19 @@ import Navbar from './components/navbar';
 import Loader from  './components/loader';
 import './App.css';
 
+const [favorites, setFavorites] = useState([]);
 
+function updateDOM(page) {
+  //Gets Favorites from localStorage
+  if (localStorage.getItem('nasaFavorites')) {
+    favorites = JSON.parse(localStorage.getItem('nasaFavorites'))
+
+  }
+  //Removes elements appended to container
+  imagesContainer.textContent = '';
+  createDOMNodes(page)
+  showContent()
+}
 
 
 function App() {
