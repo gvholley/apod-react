@@ -13,11 +13,7 @@ function updateDOM(page) {
     favorites = JSON.parse(localStorage.getItem('nasaFavorites'))
 
   }
-  //Removes elements appended to container
-  imagesContainer.textContent = '';
-  createDOMNodes(page)
-  showContent()
-}
+
 
 
 function App() {
